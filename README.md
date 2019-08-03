@@ -1,5 +1,6 @@
 # RBootcamp
 
+Añadiendo modificaciones.
 The R-Bootcamp is meant to be a gentle and gradual introduction to manipulating and visualizing data in R using the tidyverse suite of packages. Basic programming concepts in R (functions, databases, and control structures) are also covered. Topics covered include:
 
 1. The magic of ggplot2.
