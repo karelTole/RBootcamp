@@ -2,44 +2,42 @@
 type: slides
 ---
 
-# Anatomy of a ggplot2 figure
+# Anatomía de una figura ggplot2
 
 ---
 
-# Mapping variables to produce geometric plots
+# Mapeo de variables para producir trazados geométricos
 
-A statistical graphic consists of:
+Un gráfico estadístico consiste en:
 
-+ A `mapping` of variables in `data` to
-+ `aes()`thetic attributes of
-+ `geom_`etric objects.
++ Un `mapeo` de variables en` datos` a
++ `aes ()` atributos temáticos de
++ `geom_` objetos métricos.
 
-In code, this is translated as:
+En código, esto se traduce como:
 
-```r
-ggplot(data = gap1992, mapping = aes(x = log(gdpPercap), y=log(pop))) +
-  geom_point()
-```
+`` `r
+ggplot (data = gap1992, mapping = aes (x = log (gdpPercap), y = log (pop))) +
+  geom_point ()
+`` `
 ---
 
-# Anatomy of a ggplot statement
+# Anatomía de una declaración ggplot
 
-```r
-ggplot(data = gap1992, mapping = aes(x = log(gdpPercap), y=log(pop))) +
-  geom_point()
-```
+`` `r
+ggplot (data = gap1992, mapping = aes (x = log (gdpPercap), y = log (pop))) +
+  geom_point ()
+`` `
 
-Let's take the above example code apart. A `ggplot2` call always starts with the `ggplot()` function. In this function, we need two things:
+Tomemos el código de ejemplo anterior aparte. Una llamada `ggplot2` siempre comienza con la función` ggplot () `. En esta función, necesitamos dos cosas:
 
-1. `data` - in this case, `gap1992`.
-2. `mapping` - An aesthetic mapping, using the `aes()` function. 
+1. `data` - en este caso,` gap1992`.
+2. `mapping '- Un mapeo estético, utilizando la función` aes () `.
 
-In order to map our variables to aesthetic properties, we will need to use `aes()`, which is our `aes()`thetic mapping function. In our example, we map `x` to `log(gdpPercap)` and `y` to `log(pop)`.
+Para mapear nuestras variables a propiedades estéticas, necesitaremos usar `aes ()`, que es nuestra función de mapeo teórico `aes ()`. En nuestro ejemplo, asignamos `x` a` log (gdpPercap) `e` y` a `log (pop)`.
 
-Finally, we can superimpose our geometry on the plot using `geom_point()`.
+Finalmente, podemos superponer nuestra geometría en la gráfica usando `geom_point ()`.
 
 ---
 
-# Let's practice!
-
-
+# ¡Vamos a practicar!

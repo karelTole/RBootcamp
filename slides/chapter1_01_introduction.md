@@ -2,21 +2,20 @@
 type: slides
 ---
 
-# Introduction
+# Introducción
 
 ---
 
-# What is a Data Frame?
+# ¿Qué es un marco de datos o dataframe?
 
-A `data.frame` is basically a table-like format which has the following properties: 
+Un `data.frame` es básicamente un formato de tabla que tiene las siguientes propiedades:
 
-- Columns can each have a different type (`numeric`, `character`, `boolean`, `factor`)
-- Columns are called "variables"
-- Rows correspond to a single observation (ideally)
-- Can be subset or filtered based on criteria
+- Cada columna puede tener un tipo diferente (`numérico`,` carácter`, `booleano`,` factor`)
+- Las columnas se llaman "variables"
+- Las filas corresponden a una sola observación (idealmente)
+- Puede ser subconjunto o filtrado según criterios
 
 ---
 
-# Let's practice!
-
+# ¡Vamos a practicar!
 
