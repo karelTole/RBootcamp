@@ -1,9 +1,9 @@
 ---
-title: 'Chapter 1: Visualization Aesthetics'
+title: 'Capítulo 1: Estética de la visualización'
 description:
-  'The magic of `ggplot2`. Learn about how to map data to aesthetic properties such as x, y, color, and size.'
+  'La magia de `ggplot2`. Obtenga información sobre cómo asignar datos a propiedades estéticas como x, y, color y tamaño.'
 prev: null
-next: /chapter2
-type: chapter
+next: /capítulo2
+type: capítulo
 id: 1
 ---

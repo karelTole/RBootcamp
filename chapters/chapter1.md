@@ -1,27 +1,27 @@
 ---
-title: 'Chapter 1: The Magic of ggplot2' 
-description: Learn how ggplot2 turns variables into statistical graphics
+title: 'Capítulo 1: La Magia de ggplot2' 
+description: Aprenda cómo ggplot2 convierte las variables en gráficos estadísticos
 prev: null
-next: /chapter2
+next: /capítulo2
 id: 1
-type: chapter
+type: capítulo
 ---
-<exercise id="1" title="Quick Data Frame Introduction">
+<exercise id="1" title="Data Frame, Introducción rápida">
 
-Let's review the basics of `data.frame`s.
+Repasemos los conceptos básicos de `data.frame`s.
 
-A `data.frame` is basically a table-like format which has the following properties: 
+Un `data.frame` es básicamente un formato de tabla que tiene las siguientes propiedades:
 
 <img src="tidy-1.png">
 
-- Columns can each have a different type (`numeric`, `character`, `boolean`, `factor`)
-- Columns are called "variables"
-- Rows correspond to a single observation (ideally)
-- Can be subset or filtered based on criteria
+- Cada columna puede tener un tipo diferente (`numérico`,` carácter`, `booleano`,` factor`)
+- Las columnas se llaman "variables"
+- Las filas corresponden a una sola observación (idealmente)
+- Puede ser subconjunto o filtrado según criterios
 
-Individual variables within a `data.frame` can be accessed with the `$` operator (such as `gap1992$pop`). We won't use this very often, as the `tidyverse` lets us access the variables without it, as you'll see.
+Se puede acceder a las variables individuales dentro de un `data.frame` con el operador` $ `(como` gap1992 $ pop`). No usaremos esto muy a menudo, ya que el 'tidyverse' nos permite acceder a las variables sin él, como verá.
 
-Run `colnames()` and `head()` on the `gap1992` data to see what's in each column. Then see how many rows there are in the dataset using `nrow()`. Run these in console before you submit your answer.
+Ejecute `colnames ()` y `head ()` en los datos `gap1992` para ver qué hay en cada columna. Luego vea cuántas filas hay en el conjunto de datos usando `nrow ()`. Ejecútelos en la consola antes de enviar su respuesta.
 
 
 
@@ -161,7 +161,7 @@ Your final challenge is to completely recreate this graph using the `gap1992` da
 <codeblock id="01_08">
 </codeblock></exercise>
 
-<exercise id="9" title="What you learned in this chapter">
+<exercise id="9" title="What you learned in this capítulo">
 
 - Basic `ggplot2` syntax.
 - Plotting x-y data using `ggplot2` using both `geom_point()` and `geom_bar()`.
@@ -170,7 +170,7 @@ Your final challenge is to completely recreate this graph using the `gap1992` da
 - That `ggplot2` can make some pretty cool graphs
 - That you can do this!
 
-Just move on to the next chapter!
+Just move on to the next capítulo!
 
 <codeblock id="01_09">
 </codeblock></exercise>
