@@ -29,84 +29,84 @@ Ejecute `colnames ()` y `head ()` en los datos `gap1992` para ver qué hay en ca
 </codeblock></exercise>
 
 <exercise id="2" title="Thinking about aesthetics">
-Now that we've learned a little about the `data.frame`, we can get to the fun part: making graphs.
+Ahora que hemos aprendido un poco sobre el `data.frame`, podemos llegar a la parte divertida: hacer gráficos.
 
-The first thing we are going to is think about how we represent variables in a plot. 
+Lo primero que vamos a hacer es pensar en cómo representamos las variables en una gráfica.
 
-How do we visually represent a variable in our dataset? Take a look at this graph. What variable is mapped to `y`, and what is mapped to `x`, and what is mapped to `color`?
+¿Cómo representamos visualmente una variable en nuestro conjunto de datos? Echa un vistazo a este gráfico. ¿Qué variable se asigna a `y`, y qué se asigna a` x`, y qué se asigna a `color`?
 
 <img src="gap1992.png">
 
 <choice>
 <opt text="x = gdpPercap, y = log(lifeExp), color = continent">
-You have things reversed, and you're taking the log of the wrong variable</opt>
+Tienes las cosas invertidas y estás tomando el registro de la variable incorrecta</opt>
 <opt text="x = continent, y = year, color = pop">
-Wrong variables. Go back and look at what's being mapped</opt>
+Variables incorrectas. Regrese y mire lo que se está mapeando</opt>
 <opt text="y = lifeExp, x = log(gdpPercap), color = continent" correct = "true">
-Correct! We are displaying lifeExp as our y variable and log(gdpPercap) as our x variable</opt>
+¡Correcto! Estamos mostrando lifeExp como nuestra variable y y log (gdpPercap) como nuestra variable x</opt>
 </choice>
 </exercise>
 
 <exercise id="3" title="Mapping variables to produce geometric plots">
 
-A statistical graphic consists of:
+Un gráfico estadístico consiste en:
 
-+ A `mapping` of variables in `data` to
-+ `aes()`thetic attributes of
-+ `geom_`etric objects.
++ Un `mapeo` de variables en` datos` a
++ `aes ()` atributos temáticos de
++ `geom_` objetos métricos.
 
-In code, this is translated as:
+En código, esto se traduce como:
 
 ```{r}
 ggplot(data = gap1992, mapping = aes(x = log(gdpPercap), y=log(pop))) +
   geom_point()
 ```
 
-Let's take the above example code apart. A `ggplot2` call always starts with the `ggplot()` function. In this function, we need two things:
+Tomemos el código de ejemplo anterior aparte. Una llamada `ggplot2` siempre comienza con la función` ggplot () `. En esta función, necesitamos dos cosas:
 
-1. `data` - in this case, `gap1992`.
-2. `mapping` - An aesthetic mapping, using the `aes()` function. 
+1. `data` - en este caso,` gap1992`.
+2. `mapping '- Un mapeo estético, utilizando la función` aes () `.
 
-In order to map our variables to aesthetic properties, we will need to use `aes()`, which is our `aes()`thetic mapping function. In our example, we map `x` to `log(gdpPercap)` and `y` to `log(pop)`.
+Para mapear nuestras variables a propiedades estéticas, necesitaremos usar `aes ()`, que es nuestra función de mapeo teórico `aes ()`. En nuestro ejemplo, asignamos `x` a` log (gdpPercap) `e` y` a `log (pop)`.
 
-Finally, we can superimpose our geometry on the plot using `geom_point()`.
+Finalmente, podemos superponer nuestra geometría en la gráfica usando `geom_point ()`.
 
-Based on the graph below, map the appropriate variables to the `x`, and `y` aesthetics. Run your plot. Remember, you can try plots out in the console before you submit your answer.
+Con base en el gráfico a continuación, asigne las variables apropiadas a la estética `x` e` y`. Ejecuta tu trama. Recuerde, puede intentar trazar en la consola antes de enviar su respuesta.
 
 <img src="gap1992.png">
 
 
 <codeblock id="01_03">
-Look at the graph. If you need the variable names, you can always use `head()` or `colnames()` on the `gap1992` dataset.</codeblock></exercise>
+Mira la gráfica. Si necesita los nombres de las variables, siempre puede usar `head ()` o `colnames ()` en el conjunto de datos `gap1992`.</codeblock></exercise>
 
 <exercise id="4" title="More about aes">
-For `geom_point()`, there are lots of other aesthetics. The important thing to know is that
-aesthetics are properties of the `geom`. If you need to know the aesthetics that you can 
-map to a `geom`, you can always use `help()` (such as `help(geom_point)`).
+Para `geom_point ()`, hay muchas otras estéticas. Lo importante es saber que
+La estética son propiedades de la geom. Si necesitas saber la estética que puedes
+asignar a un `geom`, siempre puede usar` help () `(como` help (geom_point) `).
 
-For a list of aesthetics for `geom_point()`, look here: [http://ggplot.yhathq.com/docs/geom_point.html](http://ggplot.yhathq.com/docs/geom_point.html)
-and look at all the aesthetic mappings. 
+Para obtener una lista de la estética de `geom_point ()`, mire aquí: [http://ggplot.yhathq.com/docs/geom_point.htmlfont>(http://ggplot.yhathq.com/docs/geom_point.html)
+y mira todas las asignaciones estéticas.
 
-Which of the following is *not* a mappable aesthetic to `geom_point()`?
+¿Cuál de los siguientes es * no * una estética asignable a `geom_point ()`?
 
 <choice>
 <opt text="`x`">
-Not quite. You need `x` to map a point!</opt>
+No exactamente. ¡Necesitas `x` para mapear un punto!</opt>
 <opt text="`shape`">
-Nope. This is a mappable aesthetic to `geom_point().`</opt>
+Nope. Esta es una estética asignable a `geom_point ().`</opt>
 <opt text="`linetype`" correct = "true">
-Correct. `linetype` is not mappable to `geom_point()`. Points don't have a `linetype`, do they?</opt>
+Correcto. `linetype` no es mapeable a` geom_point () `. Los puntos no tienen un "tipo de línea", ¿verdad?</opt>
 </choice>
 </exercise>
 
 <exercise id="5" title="Points versus lines">
 
-The great thing about `ggplot2` is that it's easy to swap representations. 
-Instead of x-y points, we can plot the data as a line graph by swapping `geom_line()`
-for `geom_point()`.
+Lo bueno de `ggplot2` es que es fácil intercambiar representaciones.
+En lugar de puntos x-y, podemos trazar los datos como un gráfico lineal intercambiando `geom_line ()`
+para `geom_point ()`.
 
-First run the code to see the plot with points. Change the `geom_point()` in the following graph to `geom_line()`. What happened?
-How did the visual presentation of the data change?
+Primero ejecute el código para ver la trama con puntos. Cambie el `geom_point ()` en el siguiente gráfico a `geom_line ()`. ¿Que pasó?
+¿Cómo cambió la presentación visual de los datos?
 
 
 
@@ -115,12 +115,13 @@ How did the visual presentation of the data change?
 
 <exercise id="6" title="Geoms are layers on a ggplot">
 
-We are not restricted to a single geom on a graph! You can think of geoms
-as layers on a graph. Thus, we can use the `+` symbol to add geoms to our
-base `ggplot()` statement. 
+ Cómo se pronuncia
 
-Add both `geom_line()` and `geom_point()` to the following ggplot. Are the results what you expected?
+¡No estamos restringidos a una sola geom en un gráfico! Puedes pensar en geoms
+como capas en un gráfico. Por lo tanto, podemos usar el símbolo `+` para agregar geoms a nuestro
+declaración base `ggplot ()`.
 
+Agregue tanto `geom_line ()` como `geom_point ()` al siguiente ggplot. ¿Son los resultados lo que esperabas?
 
 
 <codeblock id="01_06">
@@ -130,9 +131,9 @@ Add both `geom_line()` and `geom_point()` to the following ggplot. Are the resul
 
 <exercise id="7" title="Quick review about ggplot2">
 
-What does the `+` in a `ggplot` statement do? 
+¿Qué hace el `+` en una declaración `ggplot`?
 
-For example:
+Por ejemplo:
 
 ```{r}
 ggplot(gap1992, aes(x = log(gdpPercap), y = lifeExp, color=continent)) +
@@ -141,36 +142,36 @@ ggplot(gap1992, aes(x = log(gdpPercap), y = lifeExp, color=continent)) +
 
 <choice>
 <opt text="adds one `data.frame` to another `data.frame` ">
-This is not the case. Go back and look at the ggplot code.</opt>
+Este no es el caso. Regrese y mire el código ggplot.</opt>
 <opt text="allows you to chain data and geoms together into a single statistical graphic" correct="true">
-Correct! This is how we can add data and layer geoms together</opt>
+¡Correcto! Así es como podemos agregar datos y capas geoms juntos</opt>
 <opt text="allows you to add variables together in a `data.frame`">
-Look at the ggplot code and see if we are manipulating data or not. Are we?</opt>
+Mire el código de ggplot y vea si estamos manipulando datos o no. ¿Estamos?</opt>
 </choice>
 </exercise>
 
 <exercise id="8" title="Final Challenge: Recreate this Gapminder Plot">
 
-Your final challenge is to completely recreate this graph using the `gap1992` data.
+Su desafío final es recrear completamente este gráfico utilizando los datos `gap1992`.
 
 <img src="gap1992.png">
 
-- If you need to remember variable names, you can always call `head(gap1992)` or `colnames(gap1992)` in the console.
-- Recreate the above graphic by mapping the right variables to the right aesthetic elements. Remember, you can try plots out in the console before you submit your answer.
+- Si necesita recordar nombres de variables, siempre puede llamar a `head (gap1992)` o `colnames (gap1992)` en la consola.
+- Recree el gráfico anterior mapeando las variables correctas a los elementos estéticos correctos. Recuerde, puede intentar trazar en la consola antes de enviar su respuesta.
 
 <codeblock id="01_08">
 </codeblock></exercise>
 
 <exercise id="9" title="What you learned in this capítulo">
 
-- Basic `ggplot2` syntax.
-- Plotting x-y data using `ggplot2` using both `geom_point()` and `geom_bar()`.
-- Mapping variables in a dataset to visual properties using `aes()`
-- `geom`s correspond to layers in a graph.
-- That `ggplot2` can make some pretty cool graphs
-- That you can do this!
+- Sintaxis básica `ggplot2`.
+- Trazar datos x-y usando `ggplot2` usando tanto` geom_point () `como` geom_bar () `.
+- Asignación de variables en un conjunto de datos a propiedades visuales usando `aes ()`
+- `geom`s corresponden a capas en un gráfico.
+- Ese `ggplot2` puede hacer algunos gráficos geniales
+- Que puedes hacer esto!
 
-Just move on to the next capítulo!
+¡Simplemente pasa al siguiente capítulo!
 
 <codeblock id="01_09">
 </codeblock></exercise>
